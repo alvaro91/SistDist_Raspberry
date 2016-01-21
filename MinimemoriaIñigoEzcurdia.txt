@@ -1,0 +1,11 @@
+Instalado SO raspbian:
+https://www.raspberrypi.org/help/noobs-setup/
+
+Configurado usuarios y acceso SSH/FTP y escritorio remoto.
+
+Abierto y redireccionamineto de puertos del router de casa para hacerla disponible públicamente.
+
+Creado servidor con node, express, jade y mongo para mostrar los datos en una tabla html. (Con get, set, put y delete):
+http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-app
+
+[PENDIENTE] Añadir y hacer funcionar sensor que guarde info en la db mongo local.
