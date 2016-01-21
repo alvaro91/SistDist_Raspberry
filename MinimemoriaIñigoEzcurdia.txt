@@ -11,3 +11,17 @@ http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-a
 [PENDIENTE] Añadir y hacer funcionar sensor que guarde info en la db mongo local.
 	Instalada librería: http://www.airspayce.com/mikem/bcm2835/
 	Instalado para acceder a datos con node: https://github.com/momenso/node-dht-sensor
+	
+	
+	
+	
+Anotaciones: 
+	Para lanzar el daemon de mongo como fork:
+		sudo mongod --fork --logpath /var/log/mongodb.log
+		
+	Para cambiar a la Db escogida:
+		 use MyDatabase
+	
+	Para vaciar la coleccion items:
+		mongo
+			db.items.remove()
