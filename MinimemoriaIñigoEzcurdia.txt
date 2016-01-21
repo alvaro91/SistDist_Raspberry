@@ -9,3 +9,5 @@ Creado servidor con node, express, jade y mongo para mostrar los datos en una ta
 http://www.raywenderlich.com/61078/write-simple-node-jsmongodb-web-service-ios-app
 
 [PENDIENTE] Añadir y hacer funcionar sensor que guarde info en la db mongo local.
+	Instalada librería: http://www.airspayce.com/mikem/bcm2835/
+	Instalado para acceder a datos con node: https://github.com/momenso/node-dht-sensor
