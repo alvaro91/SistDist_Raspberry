@@ -17,6 +17,14 @@ body {
   display: none;
 }
 
+#objects{
+  clear:both;
+}
+
+.cabecera{
+  max-width: 900px;
+}
+
 .switch-label {
   display: inline-block;
   cursor: pointer;
@@ -217,7 +225,7 @@ body {
 .screen {
   width: 100%;
   border: none;
-}
+  min-height: 95%;}
 
 #switch ~ .container > .screen {
   animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);

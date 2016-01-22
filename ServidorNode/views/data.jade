@@ -10,14 +10,15 @@ body
   | 
  div.container
   div.screen
-    img(src='./logo.png', id='logo')
-    center
-     h1 
-      | Centralita Raspberry
-     h2 
-      | Su centralita meteorológica no autorizada de confianza.
-     h4 
-      | Tip: Use la primera fila de la tabla para filtrar información.
+   center
+    div.cabecera
+      img(src='./logo.png', id='logo')
+      h1 
+       | Centralita Raspberry
+      h2 
+       | Su centralita meteorológica no autorizada de confianza.
+      h4 
+       | Tip: Use la primera fila de la tabla para filtrar información.
      #objects
             table(border=1)#datos.filterable
               if objects.length > 0
