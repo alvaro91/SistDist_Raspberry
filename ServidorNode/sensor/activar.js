@@ -32,7 +32,7 @@ mongoClient.open(function(err, mongoClient) { //C
 
             setTimeout(function () {
                 sensor.read();
-            }, 60000);
+            }, 300000);
         }
     };
 

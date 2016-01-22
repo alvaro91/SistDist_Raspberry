@@ -1,11 +1,36 @@
+head
+  title Centralita Raspberry
+  script(src='/tablefilter/tablefilter.js')
+  link(href='https://fonts.googleapis.com/css?family=VT323', rel='stylesheet', type='text/css')
+  style
+    include style.css
 body
-    h1= collection
+ input(type='checkbox', id='switch' checked)
+ label(for='switch', class='switch-label')
+  | 
+ div.container
+  div.screen
+    img(src='./logo.png', id='logo')
+    h1 
+      | Centralita Raspberry
+    h2 
+     | Su centratlia meteorológica no autorizada de confianza.
+    h4 
+      | Tip: Use la primera fila de la tabla para filtrar información.
     #objects
-        table(border=1)
-          if objects.length > 0
-              - each val, key in objects[0]
-                  th= key 
-          - each obj in objects
-            tr.obj
-              - each val, key in obj
-                td.key= val
+        center
+            table(border=1)#datos.filterable
+              if objects.length > 0
+                  - each val, key in objects[0]
+                      th= key 
+              - each obj in objects
+                tr.obj
+                  - each val, key in obj
+                    td.key= val
+            script(type='text/javascript').
+                var tf = new TableFilter('datos', {
+                    base_path: 'path/to/my/scripts/tablefilter/'
+                });
+                tf.init();
+  div.overlay
+   | AV-0
