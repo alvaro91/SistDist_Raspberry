@@ -8,6 +8,7 @@ body {
   color:#7CFC00;
   font-family: 'VT323';
   padding: 2px !important;
+  cursor: crosshair;
 }
 
 #logo{
