@@ -38,7 +38,8 @@ body {
   margin-top: 10px;
   box-shadow: 0 2px #666;
   position: fixed;
-  left:30;
+  left:30px;
+  top: 30px;
   opacity:0.5;
   z-index:200;
 }
