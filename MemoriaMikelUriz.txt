@@ -1,0 +1,29 @@
+Cliente que lee datos del sensor y los manda al servidor
+
+Arquitectura push - pull
+
+Servidor crea socket zmq pull, y se pone a escuchar en el puerto 3001
+El cliente se conecta al servidor por zmq push
+Cada 10 minutos manda los datos del sensor (humedad, temperatura), la fecha y la ID del dispositivo
+
+Para iniciar el cliente: node Client.js ID
+
+Le asignamos a cada raspberry una ID por comando
+
+EXTENSION
+
+El servidor puede pedir el dato cuando el quiera.
+Para esto arquitectura pub - sub
+
+El servidor crea un zmq pub y se pone a la escucha en el 3002
+Cada cliente se conecta al pub y se subscribe con el TAG "ALL" y su ID
+De esta manera el servidor puede mandar
+pub.send("ALL") para que todos los clientes manden sus datos
+pub.send(ID) para que solo la raspberry con id=ID mande sus datos
+
+El cliente cuando le llega un mensaje
+sub.on("message") Lee del sensor y lo manda por el push de arriba
+
+POSIBLE MODIFICACIÓN
+
+Otro canal push - pull para el envío de datos en tiempo real
