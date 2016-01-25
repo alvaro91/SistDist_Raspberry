@@ -3,7 +3,7 @@ var zmq = require("zmq");
 var sensorLib = require('node-dht-sensor');
 
 // IP y puerto
-var server_ip = "85.219.25.245";
+var server_ip = "85.219.25.246";
 var server_pull_port = 3001;
 var server_pub_port = 3002;
 
