@@ -16,7 +16,7 @@ El servidor:
  - Convierte la información en objeto JSON
  - Guarda dicha información en la bbdd MongoDB
 
-*Cada 10 minutos el servidor recibe los datos de cada sensor: (humedad, temperatura), la fecha y la ID del dispositivo.
+*Cada 5 minutos el servidor recibe los datos de cada sensor: (humedad, temperatura), la fecha y la ID del dispositivo.
 
 
 Para iniciar el servidor: node Server.js
