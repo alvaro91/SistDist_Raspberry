@@ -19,6 +19,6 @@ El servidor:
 *Cada 10 minutos el servidor recibe los datos de cada sensor: (humedad, temperatura), la fecha y la ID del dispositivo.
 
 
-Para iniciar el servidor: node server.js
+Para iniciar el servidor: node Server.js
 
 
