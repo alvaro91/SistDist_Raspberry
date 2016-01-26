@@ -1,0 +1,24 @@
+Servidor que lee datos de los tres sensores clientes y los guarda en la base de datos MongoDB
+
+
+Arquitectura push - pull
+
+
+Los clientes se conectan al servidor por zmq push.
+
+
+El servidor:
+
+ - Se conecta a la base de datos mongodb 
+ - Crea socket zmq pull 
+ - Mediante un bind se pone a escuchar en el puerto 3001
+ - Recibe la informacion enviada de los clientes (sensores)* 
+ - Convierte la información en objeto JSON
+ - Guarda dicha información en la bbdd MongoDB
+
+*Cada 10 minutos el servidor recibe los datos de cada sensor: (humedad, temperatura), la fecha y la ID del dispositivo.
+
+
+Para iniciar el servidor: node server.js
+
+
